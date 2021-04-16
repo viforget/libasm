@@ -12,12 +12,14 @@ _ft_strdup:
 	push	rdi
 	mov		rdi, rax
 	call	_malloc
-    cmp     rax, 0
-    je      exit
+	cmp		rax, 0
+	je		exit
 	pop		rsi
 	mov		rdi, rax
 	call	_ft_strcpy
+	mov		rsi, rdi
 	ret
 
 exit:
-    ret
+	pop rdi
+	ret
