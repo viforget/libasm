@@ -4,8 +4,8 @@ segment .text
     global _ft_strcpy
 
 _ft_strcpy :
-    ;push dl
     mov rax, 0
+    jmp loop
 
 loop:
     mov dl, BYTE[rsi + rax]
@@ -17,5 +17,4 @@ loop:
 
 exit:
     mov rax, rdi
-    ;pop dl
     ret
